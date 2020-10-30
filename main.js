@@ -9,7 +9,6 @@ function addSpan(item, index) {
 var numberWrapper = document.querySelector('.ml14');
 numberWrapper.innerHTML = numberWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>"); 
 
-
 $(document).ready(function() { 
 
     $('body').addClass('animate');
@@ -96,7 +95,7 @@ $(document).ready(function() {
     anime.timeline({loop: false})
       .add({
         targets: '.circle-big',
-        scale: [9,1],
+        scale: [3,1],
         translateY: [200,0],
         translateX: [20,0],
         translateZ: 0,
@@ -108,28 +107,6 @@ $(document).ready(function() {
         loop: true,
         backgrouundImage: 'linear-gradient(0deg, red 0%, #dad3c1 100%)'
     })
-
-      anime.timeline({loop: false})
-      .add({
-        targets: '.circle-small',
-        scale: [0,1],
-        translateY: [200,0],
-        translateX: [20,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutQuint",
-        duration: 2200,
-        delay: 1650
-    })
-
-
-
-    
-     
-
-
-
-
 });
 
 
