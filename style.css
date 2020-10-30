@@ -75,6 +75,7 @@ footer div.social-media a:hover svg { color: #ff57d9; fill: #ff57d9;}
 }
 @media screen and (max-width: 800px) {
   body {padding: 0;}
+  header{padding: 0 5%;}
   header ul {text-align: right;}
   header ul li {font-size: 18px;}
   section {overflow: visible;}
@@ -89,7 +90,7 @@ footer div.social-media a:hover svg { color: #ff57d9; fill: #ff57d9;}
   section img#mzwa { max-width: 420px;}
   section p,.dots {text-align: center;}
   section .dots span {height: 14px; width: 14px;}    
-  footer {position: relative; padding: 25px 0; min-width: 80%;}
+  footer {position: relative; padding: 25px 5%; min-width: 80%;}
   footer div.social-media svg {width: 16px;}
   footer div.social-media a {margin: 32px auto;}
   footer a, h2.name {font-size: 16px;}  
