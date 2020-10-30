@@ -3,270 +3,95 @@
 /* =============================================
     Resets
    ============================================= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body, h1, h2, p, ul, ol,li {
-  margin: 0;
-}
-
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
-}
-
-a, a:visited, a:active {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: inline-block;
-}
-
-article > * + * {
-  margin-top: 1em;
-}
-
+*, *::before, *::after {box-sizing: border-box;}
+body, h1, h2, p, ul, ol,li {margin: 0;}
+body {min-height: 100vh; line-height: 1.5; font-family: 'Montserrat', sans-serif;}
+a, a:visited, a:active {text-decoration: none;}
+img {max-width: 100%; display: inline-block;}
+article > * + * {margin-top: 1em;}
 
 /* =============================================
-    Resets
+    Header
    ============================================= */
+header * {transition: all 1.5s ease-in-out;}
+header, section article > div { position: relative;}
+header img {position: absolute; top: 0; left: 0;}
+header ul {padding: 0; list-style: none; text-align: center; min-height: 73px; line-height: 75px;}
+header ul li{display: inline-block; font-size: 24px; padding: 0 5px; position: relative;}
+header ul li:before { content: ' . '; font-weight: 800; padding-right: 10px;}
+header ul li:first-child:before {display: none;}
 
-section {
-  max-width: 1680px;
-  margin: 0 auto;
-  padding:  30px 0;
-  max-height: 100vh;
-  overflow: hidden;
-}
+/* =============================================
+    Body
+   ============================================= */
+section {max-width: 1680px; margin: 0 auto; padding:  30px 0; max-height: 100vh; overflow: hidden;}
+section h1  { font-size: 92px; font-weight: 900; line-height: 1.35;}
+section h1:first-child {margin-top: 100px;}
+section h1:last-child  {margin-bottom: 30px;}
+section h2  {font-weight: 400; text-transform: uppercase;}
+section article > div {min-height: 500px;}
+section img#mzwa {position: fixed; bottom: 0; right: 0; max-width: 1024px; z-index: -1;}
+section .circle-big {width: 778px; height: 778px; border-radius: 500px; background-color: #e9b5fb; background-image: linear-gradient(0deg, #e9b5fb 0%, #dad3c1 100%); position: fixed; z-index: -2; right: 12.5%;}
+section .circle-small {position: fixed; bottom: -100px; right: 5%; width: 250px; height: 250px;  background: #d9d4be; border-radius: 500px; opacity: 0.5;}
 
-header, section article > div {
-  position: relative;
-}
-
-header img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-header ul {
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  min-height: 73px;
-  line-height: 75px;
-}
-
-header ul li{
-  display: inline-block;
-  font-size: 24px;
-  padding: 0 5px;
-  position: relative;
-}
-
-header ul li:before {
-  content: ' . ';
-    font-weight: 800;
-    padding-right: 10px;
-}
-
-header ul li:first-child:before {
-  display: none;
-}
-
-section h1  {
-    font-size: 92px;
-    font-weight: 900;
-    line-height: 1.35;
-}
-section h1:first-child {
-  margin-top: 100px;
-}
-section h1:last-child  {
-  margin-bottom: 30px;
-}
-
-section h2  {    
-    font-weight: 400;
-    text-transform: uppercase;
-}
-section article > div {
-  min-height: 500px;
-}
-
-section img#mzwa {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  max-width: 1024px;
-  z-index: -1;
-}
-
-article, footer {
-  display: flex;
-}
-
-
-section .circle-big {
-    width: 778px;
-    height: 778px;
-    border-radius: 500px;
-    background-color: #e9b5fb;
-    background-image: linear-gradient(0deg, #e9b5fb 0%, #dad3c1 100%);
-    position: fixed;
-    z-index: -2;
-    right: 12.5%;
-}
-
-section .circle-small {
-    position: fixed;
-    bottom: -100px;
-    right: 5%;
-    width: 250px;
-    height: 250px;
-    background: #d9d4be;
-    border-radius: 500px;
-    opacity: 0.5;
-}
-footer {
-  position: fixed;
-  bottom: 10%;
-  min-width: 40%;
-}
-
-footer div.social-media {
-    position: fixed;
-    top: 45%;
-    right: 5%;
-    height: 200px;
-    margin-top: -100px;
-}
-
-footer div.social-media a {
-  display: block;
-  margin: 22px auto;
-}
-
-footer div.social-media svg {
-  width: 20px;
-}
-
-footer a {
-    font-size: 25px;
-    font-weight: 700;
-    color: #000;
-}
-
-footer hr {
-  height: 1px;
-  background: #000;
-  width: 40%;
-  margin-top: 17px;
-}
-
-.dots {
-  padding: 25px 0;
-}
-
-.dots span {
-  display: inline-block;
-  height: 18px;
-  width: 18px;
-  border-radius: 100px;
-  background: #DAD3C1;
-  margin-right: 15px;
-}
-
+/* =============================================
+    Footer
+   ============================================= */
+article, footer {display: flex;}
+footer {position: fixed; bottom: 10%; min-width: 40%;}
+footer hr {height: 1px; background: #000; width: 40%; margin-top: 17px;}
+footer a { font-size: 25px; font-weight: 700; color: #000;}
+footer div.social-media {position: fixed; top: 45%; right: 5%; height: 200px; margin-top: -100px;}
+footer div.social-media a {display: block; margin: 22px auto;}
+footer div.social-media svg {width: 20px;}
+footer div.social-media a {transition: all 0.4s ease-in-out;}
+footer div.social-media a:hover {transform: scale(1.25); transition: all 0.4s  ease-in-out;}
+footer div.social-media a:hover svg { color: #ff57d9; fill: #ff57d9;}
 
 /* =============================================
     Animations
    ============================================= */
-.ml12 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
+.ml12 .letter { display: inline-block; line-height: 1em;}
+.ml14 {transform-origin: 'left';}
 
-.ml14 {
-  transform-origin: 'left';
-}
-
-.ml12, .ml14, .txt01, .dots span, .line {
-  /*opacity: 0;*/
-} 
-
-
+/* =============================================
+    Devices
+   ============================================= */
 @media screen and (max-width: 1690px) {
   body {padding: 0 5%;}
   section h1 {font-size: 82px;}
   section img#mzwa{ max-width: 800px; }
   section .circle-big {width: 628px; height: 628px; bottom: -10px;}
-
 }
-
 @media screen and (max-width: 1440px) {
   section h1 {font-size: 72px;}
   footer a, h2.name {font-size: 18px;}
   footer {min-width: 60%;}
 }
-
 @media screen and (max-width: 1290px) {
-section img#mzwa { max-width: 650px;}
-section .circle-big {width: 528px; height: 528px;}
-section .circle-small {width: 150px; height: 150px;}
+  section img#mzwa { max-width: 650px;}
+  section .circle-big {width: 528px; height: 528px;}
+  section .circle-small {width: 150px; height: 150px;}
 }
-
 @media screen and (max-width: 800px) {
-  section h1:first-child {margin-top: 60px;}
-  section article > div {min-height: auto;}
-  section article > div:last-child {position: relative; min-height: 400px;} 
-  section article > div:last-child * {position: absolute;}
   header ul {text-align: right;}
-  article {display: block;}
-  section h1 {font-size: 42px; text-align: center;}
-  section p,.dots {text-align: center;}
-  footer a, h2.name {font-size: 16px;}
-  footer {min-width: 80%;}
   header ul li {font-size: 18px;}
-
-  section img#mzwa { max-width: 370px;}
+  section {overflow: visible;}
+  section h1:first-child {margin-top: 60px;}
+  section h1 {font-size: 42px; text-align: center;}
+  section article {display: block;}
+  section article > div {min-height: auto;}
+  section article > div:last-child {position: relative; min-height: 400px; overflow: hidden;} 
+  section .circle-big, section .circle-small, section img#mzwa { position: absolute; }
   section .circle-big {width: 328px; height: 328px;}
   section .circle-small {width: 90px; height: 90px;}
+  section img#mzwa { max-width: 420px;}
+  section p,.dots {text-align: center;}
+  section .dots span {height: 14px; width: 14px;}    
+  footer {position: relative; padding: 25px 0; min-width: 80%;}
   footer div.social-media svg {width: 16px;}
   footer div.social-media a {margin: 32px auto;}
-  .dots span {height: 14px; width: 14px;}
-
+  footer a, h2.name {font-size: 16px;}  
 }
-
-
-body * {
-  opacity: 0;
-}
-
-body.animate * {
-  opacity: 1;
-}
-
-
-footer div.social-media a {
-  transition: all 0.4s ease-in-out ;
-}
-
-footer div.social-media a:hover {
-  transform: scale(1.25);
-  transition: all 0.4s  ease-in-out;
-}
-
-footer div.social-media a:hover svg {
-    color: #ff57d9;
-    fill: #ff57d9;
-}
-
-header * {
-  transition: all 1.5s ease-in-out;
-}
+body * {opacity: 0;}
+body.animate * {opacity: 1;}
